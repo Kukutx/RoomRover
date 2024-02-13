@@ -1,0 +1,16 @@
+version: '3'
+services:
+  shell:
+    build:
+        context: ./
+        dockerfile: Dockerfile1
+    image: shell
+    ports:
+      - "3001:80"
+  reservation:
+    build:
+        context: ./
+        dockerfile: Dockerfile2
+    image: reservation
+    ports:
+      - "3000:80"

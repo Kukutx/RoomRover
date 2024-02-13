@@ -1,0 +1,110 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". form .";
+}
+
+.form {
+    grid-area: form;
+}
+
+p {
+    color: red;
+    position: relative;
+    bottom: 16px;
+    margin: 0;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.container-map {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". add-y ."
+        "remove-x map-grid add-x"
+        ". remove-y .";
+}
+
+.map-grid {
+    justify-self: center;
+    align-self: center;
+    grid-area: map-grid;
+}
+
+.add-y {
+    justify-self: center;
+    grid-area: add-y;
+}
+
+.remove-y {
+    justify-self: center;
+    grid-area: remove-y;
+}
+
+.add-x {
+    justify-self: start;
+    align-self: center;
+    grid-area: add-x;
+}
+
+.remove-x {
+    justify-self: end;
+    align-self: center;
+    grid-area: remove-x;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "all-left all-right";
+}
+
+.all-left {
+    grid-area: all-left;
+}
+
+.all-right {
+    grid-area: all-right;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .all {  display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "all-left"
+          "all-right";
+      }
+      
+      .all-left {
+        justify-self: center;
+        grid-area: all-left;
+      }
+      
+      .all-right {
+        justify-self: center;
+        grid-area: all-right;
+      }
+      
+}

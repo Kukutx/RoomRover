@@ -1,0 +1,99 @@
+mat-icon {
+    margin-right: 4px;
+}
+
+.card-profile-container {
+
+    background-color: white;
+    padding: 12px;
+    max-width: 200px;
+    border-radius: 12px;
+    display: grid;
+    grid-template-columns: 176px;
+    grid-template-rows: 100px auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "profile-pic"
+        "profile-data";
+        width: 200px;
+}
+
+.profile-pic {
+    position: relative;
+    bottom: 25px;
+    justify-self: center;
+    grid-area: profile-pic;
+}
+
+.profile-data {
+    /* background-color: green; */
+    grid-area: profile-data;
+}
+
+.content {
+    padding: 24px;
+}
+
+.card {
+    margin: 12px;
+    cursor: pointer;
+    min-width: 200px;
+
+    aspect-ratio: 4/3;
+    pointer-events: auto;
+
+    transform: scale(1);
+    opacity: 1;
+    transition: all 150ms ease-in-out;
+
+    &:nth-child(even) {
+        transform: translateY(8px);
+    }
+
+    &:nth-child(n) {
+        transform: rotate(-5deg);
+    }
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    place-content: center;
+
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    pointer-events: none;
+    place-content: center;
+
+}
+
+.cards:hover>.card:hover {
+    transform: scale(1.15);
+    z-index: 10;
+}
+
+.cards:hover>.card:not(:hover) {
+    opacity: 0.5;
+}
+
+.gray {
+    filter: grayscale(100%);
+}
+
+
+@media screen and (max-width: 800px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+

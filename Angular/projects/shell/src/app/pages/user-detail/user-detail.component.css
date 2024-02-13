@@ -1,0 +1,111 @@
+.container {
+    background-color: white;
+    border-radius: 12px;
+    margin: 0 24px 24px 24px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: center;
+    grid-template-areas:
+        "photo-container first-label second-label"
+        "photo-container third-label fourth-label";
+}
+
+.photo-container {
+    grid-area: photo-container;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.first-label {
+    grid-area: first-label;
+
+}
+
+.second-label {
+    grid-area: second-label;
+}
+
+.third-label {
+    grid-area: third-label;
+}
+
+.fourth-label {
+    grid-area: fourth-label;
+}
+
+h4 {
+    margin: 0;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid var(--red);
+}
+
+
+/*media query*/
+@media screen and (max-width: 1100px) {
+    .container {
+        display: grid;
+        grid-template-columns: 0.7fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center;
+        align-content: center;
+        justify-items: stretch;
+        align-items: center;
+        grid-template-areas:
+            "photo-container first-label"
+            "photo-container second-label"
+            "photo-container third-label"
+            "photo-container fourth-label";
+    }
+}
+
+.representative {
+    cursor: pointer;
+
+}
+
+.representative:hover {
+    transition: 0.2s;
+    color: var(--red);
+}
+
+/*media query*/
+@media screen and (max-width: 650px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+            "photo-container"
+            "first-label"
+            "second-label"
+            "third-label"
+            "fourth-label";
+    }
+}

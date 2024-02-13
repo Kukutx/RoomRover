@@ -1,0 +1,38 @@
+<!-- <mat-card @fade class="mat-elevation-z8"> -->
+<div class="container mat-elevation-z4">
+    <div class="photo-container">
+        <img class="avatar mat-elevation-z8"
+                src={{this.user.imageLink}} />
+    </div>
+    <div class="first-label text-contaier">
+        <p class="label">Dipendente: </p>
+        <h3 class="text-info">
+            {{this.userGraph.name}}
+            {{this.userGraph.surname}} 
+        </h3>
+    </div>
+    <div class="second-label text-contaier">
+        <p class="label">Email: </p>
+        <h3 class="text-info">
+            {{user.email}}
+        </h3>
+    </div>
+    <div class="third-label text-contaier">
+        <p class="label">Ruolo: </p>
+        <h3 class="text-info">
+            {{this.userGraph.jobTitle}} 
+
+        </h3>
+    </div>
+    <div class="fourth-label text-contaier">
+        <p class="label">Office location: </p>
+        <h3 class="text-info">
+            {{this.userGraph.officeLocation}} 
+
+        </h3>
+    </div>
+</div>
+<!-- </mat-card> -->
+
+
+<app-user-reservation></app-user-reservation>

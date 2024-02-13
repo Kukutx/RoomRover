@@ -1,0 +1,110 @@
+.reservation-container-gray {
+    max-width: 350px;
+    background-color: gainsboro !important;
+    margin: 24px 12px 36px 12px;
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "image info"
+        "partecipants partecipants";
+    filter: grayscale(100%);
+
+}
+
+.reservation-container {
+    max-width: 350px;
+    background-color: #fff;
+    margin: 24px 12px 36px 12px;
+    border-radius: 12px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 12px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "image info"
+        "partecipants partecipants";
+}
+
+.image-container {
+    max-height: 100px;
+    grid-area: image;
+}
+
+.image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    bottom: 50%
+}
+
+svg {
+    width: 100%;
+    max-width: 200px;
+}
+
+.info {
+    grid-area: info;
+
+}
+
+.partecipants-container {
+
+    grid-area: partecipants;
+
+}
+
+.partecipants-list::-webkit-scrollbar {
+    display: none;
+}
+
+.guests {
+    margin-top: 12px;
+}
+
+
+.listing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.partecipants-list {
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.partecipant {
+    background-color: #4285F4;
+    border-radius: 12px;
+    width: 200px;
+    min-width: 100px;
+    max-width: 300px;
+    margin: 0;
+    margin-left: 4px !important;
+    margin-right: 4px !important;
+    padding-left: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
+    max-width: max-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #F1F1F1;
+    font-weight: 500;
+    cursor: pointer;
+}

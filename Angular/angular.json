@@ -1,0 +1,221 @@
+{
+	"$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+	"version": 1,
+	"newProjectRoot": "projects",
+	"projects": {
+		"shell": {
+			"projectType": "application",
+			"schematics": {},
+			"root": "projects/shell",
+			"sourceRoot": "projects/shell/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/shell",
+						"index": "projects/shell/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/shell/tsconfig.app.json",
+						"assets": [
+							"projects/shell/src/favicon.ico",
+							"projects/shell/src/assets"
+						],
+						"styles": [
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"node_modules/devextreme/dist/css/dx.light.css",
+							"projects/shell/src/styles.css",
+							"node_modules/ngx-toastr/toastr.css"
+						],
+						"scripts": [],
+						"main": "projects/shell/src/main.ts",
+						"extraWebpackConfig": "projects/shell/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/shell/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "projects/shell/src/environments/environment.ts",
+                  "with": "projects/shell/src/environments/environment.development.ts"
+                }
+              ]
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "shell:build:production",
+							"extraWebpackConfig": "projects/shell/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "shell:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 5000,
+						"publicHost": "http://localhost:5000",
+						"extraWebpackConfig": "projects/shell/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "shell:build",
+						"extraWebpackConfig": "projects/shell/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/shell/tsconfig.spec.json",
+						"assets": [
+							"projects/shell/src/favicon.ico",
+							"projects/shell/src/assets"
+						],
+						"styles": [
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"node_modules/devextreme/dist/css/dx.light.css",
+							"projects/shell/src/styles.css",
+							"node_modules/ngx-toastr/toastr.css"
+						],
+						"scripts": []
+					}
+				}
+			}
+		},
+		"reservations": {
+			"projectType": "application",
+			"schematics": {},
+			"root": "projects/reservations",
+			"sourceRoot": "projects/reservations/src",
+			"prefix": "app",
+			"architect": {
+				"build": {
+					"builder": "ngx-build-plus:browser",
+					"options": {
+						"outputPath": "dist/reservations",
+						"index": "projects/reservations/src/index.html",
+						"polyfills": [
+							"zone.js"
+						],
+						"tsConfig": "projects/reservations/tsconfig.app.json",
+						"assets": [
+							"projects/reservations/src/favicon.ico",
+							"projects/reservations/src/assets"
+						],
+						"styles": [
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"node_modules/devextreme/dist/css/dx.light.css",
+							"projects/reservations/src/styles.css",
+							"node_modules/ngx-toastr/toastr.css"
+						],
+						"scripts": [],
+						"main": "projects/reservations/src/main.ts",
+						"extraWebpackConfig": "projects/reservations/webpack.config.js",
+						"commonChunk": false
+					},
+					"configurations": {
+						"production": {
+							"budgets": [
+								{
+									"type": "initial",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "500kb",
+									"maximumError": "1mb"
+								}
+							],
+							"outputHashing": "all",
+							"extraWebpackConfig": "projects/reservations/webpack.prod.config.js"
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true
+						}
+					},
+					"defaultConfiguration": "production"
+				},
+				"serve": {
+					"builder": "ngx-build-plus:dev-server",
+					"configurations": {
+						"production": {
+							"buildTarget": "reservations:build:production",
+							"extraWebpackConfig": "projects/reservations/webpack.prod.config.js"
+						},
+						"development": {
+							"buildTarget": "reservations:build:development"
+						}
+					},
+					"defaultConfiguration": "development",
+					"options": {
+						"port": 3000,
+						"publicHost": "http://localhost:3000",
+						"extraWebpackConfig": "projects/reservations/webpack.config.js"
+					}
+				},
+				"extract-i18n": {
+					"builder": "ngx-build-plus:extract-i18n",
+					"options": {
+						"buildTarget": "reservations:build",
+						"extraWebpackConfig": "projects/reservations/webpack.config.js"
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"polyfills": [
+							"zone.js",
+							"zone.js/testing"
+						],
+						"tsConfig": "projects/reservations/tsconfig.spec.json",
+						"assets": [
+							"projects/reservations/src/favicon.ico",
+							"projects/reservations/src/assets"
+						],
+						"styles": [
+							"@angular/material/prebuilt-themes/indigo-pink.css",
+							"node_modules/devextreme/dist/css/dx.light.css",
+							"projects/reservations/src/styles.css",
+							"node_modules/ngx-toastr/toastr.css"
+						],
+						"scripts": []
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,108 @@
+.resource-map {
+    display: flex;
+    background-size: cover;
+    width: fit-content;
+    border: 1px solid black;
+
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: visible;
+
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border-top: 1px solid grey;
+    border-left: 1px solid grey;
+    opacity: 0.75;
+
+
+}
+
+/* .cell:hover {
+    background-color: gold;
+} */
+
+
+.reference {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.seat {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.phone-boot {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.room {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    background-color: gray;
+}
+
+.selected {
+    padding: 4px;
+    border: solid 4px #1e90ff !important;
+    border-radius: 12px;
+}
+.resource {
+    padding: 4px;
+    border: solid 2px black;
+    border-radius: 12px;
+    margin: 8px 0px 8px 0px;
+    cursor: pointer;
+}
+
+
+
+.hoverMapWithResource {
+    background-color: aqua;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.placed-resource {
+    background-color: greenyellow;
+}
+
+.red {
+    background-color: red;
+
+
+
+}
+
+
+
+
+.single-resource{
+    width: 100%;
+}
+
+
+
+.padding{
+    padding: 0px 0px 12px 0px;
+
+}

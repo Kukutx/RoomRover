@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: #F1F1F1;
+}
+
+h1 {
+    font-weight: 600 !important;
+    margin: 0 !important;
+}
+
+p {
+    margin: 0 !important;
+}
+
+:root {
+    --primary: #1e90ff;
+    --background: 266, 16%, 92%;
+    --background-secondary: 256, 12%, 12%;
+    --background-secondary-dark: 256, 10%, 10%;
+    --background-secondary-light: 257, 11%, 16%;
+    --text-primary: 0, 0%, 0%;
+    /* Colors */
+    --black: 0, 0%, 0%;
+    --white: 0, 0%, 100%;
+    --quite-gray: 0, 0%, 50%;
+    --grooble: 10, 28%, 93%;
+    /* Sizes */
+    --heading-large: 5.6rem;
+    --heading-medium: 3.6rem;
+    --heading-small: 2.4rem;
+    --paragraph: 1.11rem;
+    --navbar-buttons: 2.4rem;
+    /* misc */
+    --transition-main: 0.175, 0.685, 0.32;
+    /* Fonts */
+    --font-main: "Poppins";
+    --color-core-primary: #3740ff;
+    --color-core-tertiary: #1e90ff;
+    --color-core-bg: #fff;
+
+    --color-avatars-background: #f8f9fa;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    color: hsl(var(--text-primary));
+    font-family: var(--font-main);
+    background-color: hsl(var(--background));
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    background-color: #F1F1F1 !important;
+
+}
+
+
+
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.label {
+    color: #7C7C7C;
+    font-size: 14px;
+}
+
+.text-info {
+    position: relative;
+    bottom: 4px;
+    font-weight: 500 !important;
+    color: #202020;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 !important;
+    font-weight: 500 !important;
+}
+
+h1 {
+    font-size: x-large !important;
+}
+
+.status {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-left: 4px;
+}
+
+.status-container {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+}
+
+
+
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.title {
+    font-weight: 600 !important;
+    font-size: 36px !important;
+}
+
+.no-avatar {
+    width: 100px;
+    height: 100px;
+    min-width: 120px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #F1F1F1;
+    margin: auto;
+    margin: auto;
+    border: 2px solid var(--red);
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.profile-image-azure {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-size: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
